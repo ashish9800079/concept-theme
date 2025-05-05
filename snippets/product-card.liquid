@@ -93,7 +93,7 @@
           {%- endunless -%}
         {%- endif -%}
 
-        {%- render 'product-badges', product: product, show_save_amount: show_save_amount, save_type: save_type, class: 'z-2 absolute grid gap-3' -%}
+     
 
         <a class="block relative media media--{{ image_ratio }}{% unless image_fill %} media--contain{% endunless %}{% unless show_secondary_image and product.media.size > 1 %} overflow-hidden{% endunless %}" href="{{ product_url }}" aria-label="{{ product.title | escape }}" tabindex="-1">
           {%- unless featured_media.media_type == 'video' or featured_media.media_type == 'external_video' -%}
@@ -236,7 +236,7 @@
             {{- product.title | escape -}}
           </a>
         </p>
-        {%- render 'product-price', product: product, class: 'flex flex-wrap lg:flex-col lg:items-end gap-2 md:gap-1d5' -%}
+        {%- render 'product-price', product: product, show_save_amount: show_save_amount, save_type: save_type, class: 'flex flex-wrap lg:flex-col lg:items-end gap-2 md:gap-1d5' -%}
         {%- if product.quantity_price_breaks_configured? -%}
           <div class="text-sm font-medium leading-tight">{{ 'products.volume_pricing.note' | t }}</div>
         {%- endif -%}
