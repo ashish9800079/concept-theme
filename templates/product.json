@@ -761,7 +761,7 @@
       "type": "product-recommendations",
       "settings": {
         "product_limit": 6,
-        "columns": 4,
+        "columns": 5,
         "carousel_on_desktop": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -790,7 +790,6 @@
     },
     "recently-viewed": {
       "type": "recently-viewed",
-      "disabled": true,
       "settings": {
         "product_limit": 6,
         "columns": 4,
