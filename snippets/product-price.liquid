@@ -75,6 +75,30 @@
         endif
       -%}
     </span>
+
+
+
+  {%- liquid
+  if product.compare_at_price > product.price and show_save_amount
+    if save_type == 'label'
+      assign saved_amount = save_type
+    elsif save_type == 'dollar'
+      assign saved_amount = product.compare_at_price | minus: product.price | money
+    else
+      assign saved_amount = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round
+      assign saved_amount = saved_amount | append: '%'
+    endif
+  endif
+-%}
+ 
+
+  {%- if saved_amount != blank -%}
+     <span class="saved-amount flex items-center gap-1d5 font-medium leading-none rounded-full">
+      {{ saved_amount }}
+    </span>
+  {%- endif -%}
+
+  
   {%- endif -%}
 
   {%- unless hide_unit_price -%}
