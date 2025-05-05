@@ -37,31 +37,31 @@
   {%- endif -%}
 
   <span class="price__regular whitespace-nowrap">
-    {%- liquid
-      if product.quantity_price_breaks_configured? != true or skip_to_price
-        if target == product and product.price_varies
-          if settings.currency_code_enabled
-            assign price_min = product.price_min | money_with_currency
-          else
-            assign price_min = product.price_min | money
-          endif
-          echo 'products.price.from_price_html' | t: price: price_min
-        else
-          if settings.currency_code_enabled
-            echo price | money_with_currency
-          else
-            echo price | money
-          endif
-        endif
+   {%- liquid
+  if product.quantity_price_breaks_configured? != true or skip_to_price
+    if target == product and product.price_varies
+      if settings.currency_code_enabled
+        assign price_min = product.price_min | money_with_currency
       else
-        if settings.currency_code_enabled
-          assign price_min = product.price_min | money_with_currency
-        else
-          assign price_min = product.price_min | money
-        endif
-        echo 'products.price.from_price_html' | t: price: price_min
+        assign price_min = product.price_min | money
       endif
-    -%}
+      echo price_min
+    else
+      if settings.currency_code_enabled
+        echo price | money_with_currency
+      else
+        echo price | money
+      endif
+    endif
+  else
+    if settings.currency_code_enabled
+      assign price_min = product.price_min | money_with_currency
+    else
+      assign price_min = product.price_min | money
+    endif
+    echo price_min
+  endif
+-%}
   </span>
 
   {%- if on_sale -%}
