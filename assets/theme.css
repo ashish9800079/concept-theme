@@ -14556,3 +14556,9 @@ lookbook-element .banner__box .title-wrapper {
     }
   }
 }
+
+@media screen and (max-width: 783px) {
+.collection.page-width.relative.with-drawer {
+    padding: 0 5px;
+}
+}
