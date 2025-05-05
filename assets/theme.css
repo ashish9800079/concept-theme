@@ -14562,7 +14562,8 @@ lookbook-element .banner__box .title-wrapper {
     padding: 0 5px;
 }.card-grid {
 
-    gap: 5px;
+        row-gap: 10px;
+        column-gap: 5px;
 }a.product-card__title {
     white-space: nowrap;
     overflow: hidden;
