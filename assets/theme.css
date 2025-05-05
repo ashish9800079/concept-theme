@@ -10303,8 +10303,7 @@ html.touch .logo-list--right .logo-bar.animate {
   position: absolute;
   inset-block-start: 50%;
   width: 100%;
-  transform: rotate(-15deg);
-  border-block-end: 1px solid red;
+  border-block-end: 1px solid #afafaf;
 }
 
 /*! pagination */
