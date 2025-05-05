@@ -3587,7 +3587,7 @@ html:not(.touch) .mouse-cursor.active.pressed .icon {
 .media--rounded>:is(img, svg, video-media),
 .media--square>:is(img, svg, video-media),
 .aspect-square {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1.5 / 2;
 }
 
 .media--portrait>:is(img, svg, video-media),
