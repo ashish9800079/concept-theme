@@ -14574,4 +14574,7 @@ lookbook-element .banner__box .title-wrapper {
 .price__regular {
     font-size: 17px;
 }
-
+span.saved-amount {
+    font-size: 12px;
+    color: green;
+}
