@@ -38,7 +38,7 @@
           "type": "collapsible_tab",
           "settings": {
             "icon": "none",
-            "heading": "Collapsible row",
+            "heading": "Description",
             "content": "",
             "page": "",
             "liquid": "{{ product.description }}"
